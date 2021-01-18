@@ -1,10 +1,4 @@
-const appEl = document.getElementById('app');
-
-async function hashHandler() {
-  const hash = !location.hash ? '#/' : location.hash;
-  json.page = curPage(hash);
-  appEl.innerHTML = renderTemplate('main');
-}
+const app = document.getElementById('app');
 
 async function init() {
 
@@ -15,33 +9,29 @@ async function init() {
     return options.inverse(this);
   });
 
-  const hash = !location.hash ? '#/' : location.hash;
   const res = await fetch(`data.json`)
-  json = await res.json();
-  json.page = curPage(hash);
-  appEl.innerHTML = renderTemplate('main');
-}
+  const json = await res.json();
 
-function renderTemplate(tmpId) {
-  console.log(json);
-  var template = document.getElementById(tmpId).innerHTML;
-  var templateScript = Handlebars.compile(template);
-  // filter entries for this page
-  var data = {};
-  data.entries = json.entries.filter(x => x.page == json.page);
-  var html = templateScript(data);
-  return html;
-}
+  const router = new Navigo('/');
+  router.on('/', function() {
+    // do something
+    app.innerHTML = renderTemplate('main', 'home', json);
+  });
+  router.on('/blog', function() {
+    app.innerHTML = renderTemplate('main', 'blog', json);
+  });
+  router.resolve();
 
-function curPage(hash) {
-  let page = hash.replace('#/', '');
-  if (page == '') {
-    page = 'home';
-  }
-  console.log('Current page:', page);
-  return page;
 }
 
 init();
 
-window.addEventListener('hashchange', hashHandler, false);
+function renderTemplate(tmpId, page, json) {
+  var template = document.getElementById(tmpId).innerHTML;
+  var templateScript = Handlebars.compile(template);
+  // filter entries for this page
+  var data = {};
+  data.entries = json.entries.filter(x => x.page == page);
+  var html = templateScript(data);
+  return html;
+}
