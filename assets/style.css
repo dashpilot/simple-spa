@@ -1,0 +1,13 @@
+nav{
+  padding: 15px;
+  border-bottom: 1px solid #DDD;
+}
+
+nav a{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+article{
+  padding: 25px;
+}

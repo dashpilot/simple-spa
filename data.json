@@ -1,0 +1,24 @@
+{
+  "entries": [{
+      "id": "1",
+      "title": "Hello World",
+      "body": "Lorem ipsum dolor site amet",
+      "layout": "post",
+      "page": "home"
+    },
+    {
+      "id": "2",
+      "title": "Hello World",
+      "body": "Lorem ipsum dolor site amet",
+      "layout": "post",
+      "page": "blog"
+    },
+    {
+      "id": "3",
+      "title": "Second post",
+      "body": "Lorem ipsum dolor site amet",
+      "layout": "post",
+      "page": "blog"
+    }
+  ]
+}

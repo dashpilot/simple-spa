@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav>
+    <a href="#/">Home</a>
+    <a href="#/blog">Blog</a>
+  </nav>
+  <div class="container mt-5" id="app"></div>
+  <template id="main">
+    <div class="entries">
+      {{#each entries}}
+        <article>
+          <h2>{{title}}</h2>
+          <p>
+
+            {{body}}</p>
+        </article>
+      {{/each}}
+    </div>
+  </template>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
