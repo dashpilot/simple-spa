@@ -19,6 +19,7 @@
       {{#each entries}}
         <article>
           <h2>{{title}}</h2>
+          {{#ifEq layout 'post'}}post{{/ifEq}}
           <p>
 
             {{body}}</p>

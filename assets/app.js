@@ -7,6 +7,14 @@ async function hashHandler() {
 }
 
 async function init() {
+
+  Handlebars.registerHelper('ifEq', function(v1, v2, options) {
+    if (v1 === v2) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
+  });
+
   const hash = !location.hash ? '#/' : location.hash;
   const res = await fetch(`data.json`)
   json = await res.json();
