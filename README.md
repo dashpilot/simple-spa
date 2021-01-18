@@ -1,4 +1,4 @@
-# tiny-spa
+# simple-spa
 Tiny single-page app written in vanilla js
 
 ## About
