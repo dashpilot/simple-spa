@@ -37,24 +37,6 @@ Add a `_redirects` file containing the following:
 ```
 More info: https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps
 
-### Amazon S3
-For Amazon S3 (or S3-compatible storage like Linode Object Storage) be sure to set the `ErrorDocument` to `index.html`, for example using the Nodejs SDK for AWS:
-```
-  WebsiteConfiguration: {
-    ErrorDocument: {
-      Key: 'index.html'
-    },
-    IndexDocument: {
-      Suffix: 'index.html'
-    },
-  }
-```
-More info: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/s3-example-static-web-host.html
-
-### BunnyCDN Storage
-Bunnycdn has a great feature that allows you to host files directly on their CDN, and you can host static sites too! To enable redirects create a folder called `bunnycdn_errors` and inside that folder put a file called `404.html` which should have the same contents as your index.html\
-More info: https://support.bunny.net/hc/en-us/articles/360000332631-How-do-I-configure-a-custom-404-page-for-my-storage-zone
-
 ### Apache
 Create a `.htaccess` file containing the following:
 ```
