@@ -27,7 +27,16 @@ Add a vercel.json file with the following contents:
 }
 ```
 ### Netlify
-Add a `_redirects` file containing the following:\
+Add a `_redirects` file containing the following:
 ```
 /*    /index.html   200
+```
+
+### Apache
+Create a `.htaccess` file containing the following:
+```
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/index.html$
+RewriteCond %{REQUEST_URI} !\.(gif|jpe?g|png|css|js)$
+RewriteRule .* /index.html [L,R=302]
 ```
