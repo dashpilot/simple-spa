@@ -28,4 +28,6 @@ Add a vercel.json file with the following contents:
 ```
 ### Netlify
 Add a `_redirects` file containing the following:\
-`/*    /index.html   200`
+```
+/*    /index.html   200
+```
