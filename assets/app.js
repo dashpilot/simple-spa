@@ -15,10 +15,13 @@ async function init() {
   const router = new Navigo('/');
   router.on('/', function() {
     // do something
-    app.innerHTML = renderTemplate('main', 'home', json);
+    app.innerHTML = renderTemplate('main', json, 'home');
   });
   router.on('/blog', function() {
-    app.innerHTML = renderTemplate('main', 'blog', json);
+    app.innerHTML = renderTemplate('main', json, 'blog');
+  });
+  router.notFound(() => {
+    app.innerHTML = renderTemplate('notfound', json);
   });
   router.resolve();
 
@@ -26,7 +29,7 @@ async function init() {
 
 init();
 
-function renderTemplate(tmpId, page, json) {
+function renderTemplate(tmpId, json, page = 'home') {
   var template = document.getElementById(tmpId).innerHTML;
   var templateScript = Handlebars.compile(template);
   // filter entries for this page
