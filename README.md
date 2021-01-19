@@ -34,6 +34,9 @@ Add a `_redirects` file containing the following:
 /*    /index.html   200
 ```
 
+### BunnyCDN Storage
+Bunnycdn has a great feature that allows you to host files directly on their CDN, and you can host static sites too! To enable redirects create a folder called `bunnycdn_errors` and inside that folder put a file called `404.html` which should have the same contents as your index.html
+
 ### Apache
 Create a `.htaccess` file containing the following:
 ```
