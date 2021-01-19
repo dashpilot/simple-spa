@@ -14,7 +14,7 @@ Simple SPA supports hash-based as well as history.pushState() routing. For the l
 
 ### Vercel
 Add a vercel.json file with the following contents:
-`
+```
 {
   "routes": [{
       "handle": "filesystem"
@@ -25,4 +25,4 @@ Add a vercel.json file with the following contents:
     }
   ]
 }
-`
+```
