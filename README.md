@@ -1,5 +1,5 @@
 # Vanilla SPA
-Simple single-page app written in vanilla js
+Simple single-page app written in vanilla js. It uses Handlebars for templating and Navigo for routing.
 
 ## About
 Tired of compilers, build-scripts, dependancy hell and `npm audit fix`? This refreshingly simple Single Page App (SPA) has no shadow dom or build pipelines and does just enough to be useful.
