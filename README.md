@@ -1,13 +1,13 @@
-# simple-spa
+# Vanilla SPA
 Simple single-page app written in vanilla js
 
 ## About
-Tired of compilers, build-scripts, dependancy hell and `npm audit fix`? This refreshingly simple Single Page App (SPA) has exactly one dependancy (handlebars), no shadow dom or build pipelines and does just enough to be useful.
+Tired of compilers, build-scripts, dependancy hell and `npm audit fix`? This refreshingly simple Single Page App (SPA) has no shadow dom or build pipelines and does just enough to be useful.
 
-Simple SPA also runs in environments that do not support Nodejs such as Object Storage or shared hosting and can be edited on the fly without waiting for a compiler or a build pipeline.
+Vanilla SPA also runs in environments that do not support Nodejs such as Object Storage or shared hosting and can be edited on the fly without waiting for a compiler or a build pipeline.
 
 ## History.pushState() Routing
-Simple SPA supports history.pushState() routing, which gives you clean URLs (no #hash). Another advantage is that you can prerender you pages via a service like https://prerender.com, effectively turning you SPA into a static site!
+Vanilla SPA supports history.pushState() routing, which gives you clean URLs (no #hash). Another advantage is that you can prerender you pages via a service like https://prerender.com, effectively turning you SPA into a static site!
 
 For history.pushState() to work, you need to redirect all requests to index.html. Below are some examples on how to configure this on different platforms:
 
