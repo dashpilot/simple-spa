@@ -6,6 +6,9 @@ Tired of compilers, build-scripts, dependancy hell and `npm audit fix`? This ref
 
 Vanilla SPA also runs in environments that do not support Nodejs such as Object Storage or shared hosting and can be edited on the fly without waiting for a compiler or a build pipeline.
 
+## Demo
+https://vanilla-spa-wine.vercel.app/
+
 ## History.pushState() Routing
 Vanilla SPA supports history.pushState() routing, which gives you clean URLs (no #hash). Another advantage is that you can prerender you pages via a service like https://prerender.com, effectively turning you SPA into a static site!
 
